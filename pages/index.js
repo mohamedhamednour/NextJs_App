@@ -18,9 +18,9 @@ export default function Home({products}) {
           
             {products
               ? products.map((item) => [
-                  <div className="col-12 col-md-3 m-auto card p-2 gap-2  ">
+                  <div key={item.id}  className="col-12 col-md-3 m-auto card p-2 gap-2  ">
                     <p>{item.name}</p>
-                    <img  class="w-[150px] h-[150px] m-auto"  key={item.id} src={item.image} /><br />
+                    <img  class="w-[150px] h-[150px] m-auto"  src={item.image} /><br />
                     <h3 align='center'> price : {item.price}</h3>
 
                 
